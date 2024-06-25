@@ -1,0 +1,30 @@
+@import url(variables.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: "Roboto-Regular";
+}
+
+body {
+    background: linear-gradient(var(--color--one), var(--color--one--rgba));
+}
+
+.container{
+    
+}
+
+.seccion1{
+
+}
+
+.seccion2{
+
+}
+
+.seccion3{
+
+}
+
