@@ -9,6 +9,7 @@
 
 body {
     background: linear-gradient(var(--color--one), var(--color--one--rgba));
+    min-height: 100vh;
 }
 
 .container {
@@ -66,18 +67,58 @@ body {
 }
 
 
-
-
-
+.circulos1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #bcee0a; */
+}
+.datoRedArriba::before {
+    content: '';
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    z-index: 1;
+}
+.progress {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #ffcc00 var(--percentage),
+        #d8151500 0
+    );
+}
+.progress-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 100%;
+    margin-left: 19px;
+    margin-top: 16px;
+    background-color: #2d3050;
+    position: absolute;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    z-index: 2;
+}
+.progress-text .value {
+    font-size: 48px;
+}
 
 
 .footer {
     grid-column: 2;
     background: var(--color--one); /* Color de fondo */
-    padding: 20px 0; /* Espaciado interno */
-    margin-top: auto; /* Empuja el footer hacia abajo */
+    padding: 20px 0; 
+    position: fixed; 
+    bottom: 0;
+    left: 30%;
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
+    border-radius: 20px;
+    justify-content: space-between;
 }
 
 .footer ul {
@@ -86,7 +127,7 @@ body {
     align-items: center;
     gap: 30px;
     list-style: none;
-    padding: 20px;
+    padding: 20px 50px 20px 50px;
 }
 
 .footer ul li a {
