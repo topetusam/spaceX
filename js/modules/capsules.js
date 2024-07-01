@@ -38,21 +38,3 @@ export const getCapsuleMissions = async (id) => {
     let data = await res.json();
     return data;
 };
-
-// Puedes añadir más funciones según las necesidades de tu proyecto
-
-export const queryCapsules = async (options) => {
-    let config = {
-        headers: {
-            "content-type": "application/json"
-        },
-        method: "POST",
-        body: JSON.stringify({
-            options: options
-        })
-    };
-
-    let res = await fetch("https://api.spacexdata.com/v4/capsules/query", config);
-    let data = await res.json();
-    return data;
-};
