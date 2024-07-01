@@ -3,3 +3,4 @@ export const nameRockets = async(name)=>{
     header__title.innerHTML = "";
     header__title.textContent = name;
 }
+

@@ -29,7 +29,7 @@ import {
     progressDiameterRocket,
     progressSecondStageDiameterRocket,
     progressSecondStageHeightRocket,
-} from "./progressbar.js";
+} from "../modulesComponents/progressBar.js";
 ///
 import { 
     getAllCapsules 

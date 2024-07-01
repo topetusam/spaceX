@@ -9,7 +9,7 @@
 }
 
 body {
-    background: linear-gradient(var(--color--one), var(--color--one--rgba));
+    background: #2e2e38;
 }
 
 *::-webkit-scrollbar {
@@ -358,6 +358,8 @@ body {
 }
 .footer ul li {
     list-style: none;
+    padding: 10px 20px;
+    
 }
 
 .footer ul li a {
@@ -366,6 +368,7 @@ body {
     flex-direction: column;
     align-items: center;
     color: var(--color--two);
+    font-size: 20px;
 }
 .select{
     padding: 8px 0;

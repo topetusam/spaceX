@@ -2,7 +2,7 @@ import {
     load,
     paginationCapsules,
     paginationRockets
-} from "./components/pagination.js";
+} from "./modulesComponents/pagination.js";
 
 let footerSelect = async(e, id)=>{
     e.preventDefault();
