@@ -8,7 +8,6 @@ export const getAllRocketsId = async (id)=>{
     let data = await res.json();
     return data;
 }
-
 export const getRocketMassTotal  = async() =>{
     let config = {
         headers:{
@@ -32,7 +31,6 @@ export const getRocketMassTotal  = async() =>{
     let {docs:[{mass} = maxMassRocket]} = await res.json();
     return mass;
 }
-
 export const getRocketPayloadWeightsTotal  = async() =>{
     let config = {
         headers:{
