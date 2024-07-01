@@ -3,7 +3,8 @@ import {
     getAllRocketsId
 } from "../modules/rockets.js";
 import { 
-    nameRockets 
+    nameRockets,
+    serialCapsules
 } from "./title.js";
 import { 
     informationRockets,
