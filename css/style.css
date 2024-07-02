@@ -1,0 +1,48 @@
+@import url(variables.css);
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "EncodeSans-Regular";
+    box-sizing: border-box;
+}
+body{
+    background: rgb(134, 127, 127);
+}
+
+
+
+
+
+
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    padding: 20px; /* Espaciado interior */
+    border-top: 1px solid #555; /* Borde superior */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#moduleLinks {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+}
+
+#moduleLinks li {
+    margin: 0 10px; 
+}
+
+#moduleLinks a {
+    color: #fff; 
+    text-decoration: none; 
+    display: flex; 
+    align-items: center; 
+}
+
+#moduleLinks a i {
+    margin-right: 5px; 
+    font-size: 18px; 
+}
