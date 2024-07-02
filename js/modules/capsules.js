@@ -1,40 +1,31 @@
-export const getAllCapsules = async (page,limit)=>{
-    let config = {
-        headers:{
-            "content-type": "application/json"
-        },
-        method: "POST",
-        body: JSON.stringify({
-            "options": {
-                page,
-                limit
+// js/modules/capsules.js
+
+export function loadModuleData(container) {
+    fetch("https://api.spacexdata.com/v4/capsules")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
             }
+            return response.json();
         })
-    }
-    let res = await fetch("https://api.spacexdata.com/v4/capsules/query", config)
-    let data = await res.json();
-    console.log(data);
-    return data;
+        .then(data => {
+            const capsulesHtml = data.map(capsule => `
+                <div class="capsule">
+                    <h2>${capsule.name}</h2>
+                    <p>Type: ${capsule.type}</p>
+                    <p>Status: ${capsule.status}</p>
+                    <p>Details: ${capsule.details}</p>
+                    <p>Reuse Count: ${capsule.reuse_count}</p>
+                    <p>Water Landings: ${capsule.water_landings}</p>
+                    <p>Land Landings: ${capsule.land_landings}</p>
+                    <p>Serial Number: ${capsule.serial}</p>
+                    <img src="https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg" alt="${capsule.name} image" style="width: 300px;" referrerpolicy="no-referrer">
+                </div>
+            `).join('');
+
+            container.innerHTML = capsulesHtml;
+        })
+        .catch(error => {
+            console.error("Error fetching capsule data:", error);
+        });
 }
-
-// modules/capsules.js
-
-export const getCapsuleById = async (id) => {
-    let res = await fetch(`https://api.spacexdata.com/v4/capsules/${id}`);
-    let data = await res.json();
-    return data;
-};
-
-// Otras funciones para obtener información específica de las cápsulas, por ejemplo:
-
-export const getCapsuleDetails = async (id) => {
-    let res = await fetch(`https://api.spacexdata.com/v4/capsules/${id}/details`);
-    let data = await res.json();
-    return data;
-};
-
-export const getCapsuleMissions = async (id) => {
-    let res = await fetch(`https://api.spacexdata.com/v4/capsules/${id}/missions`);
-    let data = await res.json();
-    return data;
-};

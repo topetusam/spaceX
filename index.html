@@ -1,178 +1,26 @@
 <!DOCTYPE html>
-<html lang="sp">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpaceX</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="js/main.js" defer></script>
+    <title>Navegación entre Módulos SpaceX</title>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/modules/capsules.js" defer></script>
+
 </head>
 <body>
-    <header class="header">
-        <div id="header__title" class="header__title">
-            <div class="load"></div>
-        </div>
-    </header>
-    <main class="main">
-        <nav class="nav__description">
-            <div id="description__item" class="description__item">
-                <div class="load"></div>
-                <div class="load"></div>
-                <div class="load"></div>
-                <div class="load"></div>
-                <div class="load"></div>
-            </div>
-            <div class="description__buttom">
-                <!-- <a href="#">a</a>
-                <a href="#">b</a> -->
-            </div>
-        </nav>
-        <section class="main__section">
-            <article id="section__information__1" class="section__information__1">
-                <div class="load" style="height: 150px;"></div>
-            </article>
-            <article class="section__information__container">
-                <div class="section__information__2">
-                    <div>
-                        <div class="load" style="height: 150px;"></div>
-                    </div>
-                    <div id="information__table__1" class="information__table__1">
-                        <div class="load" style="height: 160px;"></div>
-                    </div>
-                </div>
-                <div id="section__image" class="section__image">
-                    <div class="load" style="height: 350px"></div>
-                </div>
-                <div class="section__information__3">
-                    <div>
-                        <div class="load" style="height: 150px;"></div>
-                    </div>
-                    <div id="information__table__2" class="information__table__2">
-                        <div class="load" style="height: 160px;"></div>
-                    </div>
-                </div>
-            </article>
-            <footer class="footer">
-                <ul>
-                    <li id="rocket">
-                        <a class="select" href="#">
-                            <img src="storage/img/icons/rocket.svg">
-                            <span>Rockets</span>
-                        </a>
-                    </li>
-                    <li id="capsules">
-                        <a href="#">
-                            <img src="storage/img/icons/capsule.svg">
-                            <span>Capsules</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="storage/img/icons/astronaut_3jmnbtghpip0.svg">
-                            <span>Company</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="storage/img/icons/navexd.svg">
-                            <span>History</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://www.example.com">
-                            <span>Cores</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://www.example.com">
-                            <span>Crews</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://www.example.com">
-                            <span>Dragons</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://www.example.com">
-                            <span>Landpads</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://www.example.com">
-                            <span>Launches</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://www.example.com">
-                            <span>Launchpads</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://www.example.com">
-                            <span>Payloads</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://www.example.com">
-                            <span>Roadster</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://www.example.com">
-                            <span>Ships</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="http://www.example.com">
-                            <span>Starlink</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </footer>
-        </section>
-        <nav class="nav__information">
-            <div id="information__2" class="information__item">
-                <div class="load"></div>
-                <div class="load"></div>
-                <div class="load"></div>
-                <div class="load"></div>
-                <div class="load"></div>
-            </div>
-            <div id="paginacion" class="information__buttom"></div>
-        </nav>
-    </main>
-
+    <h1>Navegación entre Módulos SpaceX</h1>
     
-    <!-- Check icons -->
-    <!-- <i class='bx bxs-check-circle' style='color:#9499c3'  ></i>
-    <i class='bx bxs-check-circle' style='color:#40c110'  ></i>
-    <i class='bx bxs-check-circle' style='color:#ea7b15'  ></i> -->
+    <ul id="moduleLinks">
+        <li><a href="#rockets">Rockets</a></li>
+        <li><a href="#capsules">Capsules</a></li>
+        <li><a href="#module3">Module 3</a></li>
+        <!-- Agrega más enlaces según sea necesario para cada módulo -->
+        <li><a href="#module14">Module 14</a></li>
+    </ul>
 
-    <!-- Nav icons -->
-    <!-- <img src="storage/img/icons/rocket.svg">
-    <i class='bx bx-body' style='color:#e72d2d'></i>
-    <img src="storage/img/icons/comms.svg">
-    <img src="storage/img/icons/prop.svg">
-    <img src="storage/img/icons/mech.svg">
-    <i class='bx bxs-battery-charging bx-rotate-270' style='color:#ffffff'  ></i>
-    <i class='bx bxs-chip' style='color:#ffffff'  ></i>
-    <i class='bx bx-current-location bx-rotate-270' style='color:#ffffff'  ></i>
-    <i class='bx bxs-brightness-half' style="color: #fff"></i>  -->
-    
+    <div id="moduleContent">
+        <!-- Aquí se cargará dinámicamente el contenido del módulo -->
+    </div>
 </body>
 </html>
-
