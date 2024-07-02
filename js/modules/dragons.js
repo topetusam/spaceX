@@ -1,5 +1,3 @@
-// js/modules/dragons.js
-
 let currentPage = 1;
 
 export function loadModuleData(container, page) {
@@ -50,25 +48,18 @@ function setupPagination(totalItems, container) {
     const itemsPerPage = 1; // Mostrar un dragón por página
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-    let paginationHtml = `
-        <div id="paginationDragons">
-            <button id="prevPageDragons" ${currentPage === 1 ? 'disabled' : ''}>Anterior</button>
-            <span>Página ${currentPage} de ${totalPages}</span>
-            <button id="nextPageDragons" ${currentPage === totalPages ? 'disabled' : ''}>Siguiente</button>
-        </div>
-    `;
+    let paginationHtml = `<div id="paginationDragons">`;
+    for (let i = 1; i <= totalPages; i++) {
+        paginationHtml += `<button class="page-number" data-page="${i}">${i}</button>`;
+    }
+    paginationHtml += `</div>`;
 
     container.insertAdjacentHTML('beforeend', paginationHtml);
 
-    document.getElementById('prevPageDragons').addEventListener('click', () => {
-        if (currentPage > 1) {
-            loadModuleData(container, currentPage - 1);
-        }
-    });
-
-    document.getElementById('nextPageDragons').addEventListener('click', () => {
-        if (currentPage < totalPages) {
-            loadModuleData(container, currentPage + 1);
-        }
+    document.querySelectorAll('.page-number').forEach(button => {
+        button.addEventListener('click', () => {
+            const page = parseInt(button.getAttribute('data-page'));
+            loadModuleData(container, page);
+        });
     });
 }

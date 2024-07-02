@@ -1,14 +1,16 @@
-// js/modules/rockets.js
-
 let currentPage = 1;
-const itemsPerPage = 1; // Número de elementos por página
 
 export function loadModuleData(container, page) {
     currentPage = page || currentPage;
     fetch("https://api.spacexdata.com/v4/rockets")
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
-            const paginatedData = paginate(data, currentPage, itemsPerPage);
+            const paginatedData = paginate(data, currentPage);
             renderRockets(paginatedData, container);
             setupPagination(data.length, container);
         })
@@ -17,7 +19,8 @@ export function loadModuleData(container, page) {
         });
 }
 
-function paginate(items, page, itemsPerPage) {
+function paginate(items, page) {
+    const itemsPerPage = 1; // Mostrar un cohete por página
     const start = (page - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     return items.slice(start, end);
@@ -44,27 +47,21 @@ function renderRockets(data, container) {
 }
 
 function setupPagination(totalItems, container) {
+    const itemsPerPage = 1; // Mostrar un cohete por página
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-    let paginationHtml = `
-        <div id="paginationRockets">
-            <button id="prevPageRockets" ${currentPage === 1 ? 'disabled' : ''}>Anterior</button>
-            <span>Página ${currentPage} de ${totalPages}</span>
-            <button id="nextPageRockets" ${currentPage === totalPages ? 'disabled' : ''}>Siguiente</button>
-        </div>
-    `;
+    let paginationHtml = `<div id="paginationRockets">`;
+    for (let i = 1; i <= totalPages; i++) {
+        paginationHtml += `<button class="page-number" data-page="${i}">${i}</button>`;
+    }
+    paginationHtml += `</div>`;
 
     container.insertAdjacentHTML('beforeend', paginationHtml);
 
-    document.getElementById('prevPageRockets').addEventListener('click', () => {
-        if (currentPage > 1) {
-            loadModuleData(container, currentPage - 1);
-        }
-    });
-
-    document.getElementById('nextPageRockets').addEventListener('click', () => {
-        if (currentPage < totalPages) {
-            loadModuleData(container, currentPage + 1);
-        }
+    document.querySelectorAll('.page-number').forEach(button => {
+        button.addEventListener('click', () => {
+            const page = parseInt(button.getAttribute('data-page'));
+            loadModuleData(container, page);
+        });
     });
 }
