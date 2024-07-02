@@ -48,7 +48,7 @@ function setupPagination(totalItems, container) {
     const itemsPerPage = 1; // Mostrar una cápsula por página
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-    let paginationHtml = `<div id="paginationCapsules">`;
+    let paginationHtml = `<div id="paginationAll">`;
     for (let i = 1; i <= totalPages; i++) {
         paginationHtml += `<button class="page-number" data-page="${i}">${i}</button>`;
     }

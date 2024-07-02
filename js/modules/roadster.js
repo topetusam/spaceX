@@ -42,7 +42,7 @@ function setupPagination(totalItems, container) {
     const totalPages = Math.ceil(totalItems / limit);
 
     let paginationHtml = `
-        <div id="paginationRoadster">
+        <div id="paginationAll">
             <button id="prevPageRoadster" ${currentPage === 1 ? 'disabled' : ''}>Anterior</button>
             <span>Página ${currentPage} de ${totalPages}</span>
             <button id="nextPageRoadster" ${currentPage === totalPages ? 'disabled' : ''}>Siguiente</button>
