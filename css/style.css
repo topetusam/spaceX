@@ -11,13 +11,31 @@ body{
 
 /* General Styles */
 .rocket {
-    margin: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    justify-content: center;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #625fe9;
 }
 
+
+
+.rocket-name{
+    grid-column: 2;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.rocket img {
+    width: 100px;
+    grid-column: 2;
+    
+}
 /* Table Styles */
 .rocket-details {
     width: 100%;
@@ -37,6 +55,51 @@ body{
     font-weight: bold;
 }
 
+/*tabla*/
+.rocket-table {
+    margin-top: 20px;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.rocket-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rocket-table th, .rocket-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.rocket-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/*tabla2*/
+.rocket-table1 {
+    margin-top: 20px;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.rocket-table1 table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rocket-table1 th, .rocket-table1 td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.rocket-table1 th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
 
 
 
@@ -80,8 +143,8 @@ main {
 /* Pagination Styles */
 #paginationAll {
     position: fixed;
-    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
-    right: 20px; /* Ajusta la distancia desde la parte derecha */
+    bottom: 65px; /* Ajusta la distancia desde la parte inferior */
+    right: 5px; /* Ajusta la distancia desde la parte derecha */
     display: flex;
     overflow-x: auto; /* Habilitar scroll horizontal */
     white-space: nowrap; /* Evitar que los botones se envuelvan */
@@ -89,7 +152,7 @@ main {
     border-radius: 8px; /* Bordes redondeados */
     padding: 5px; /* Espacio interior alrededor de los botones */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    max-width: 300px; /* Ancho máximo del contenedor de paginación */
+    max-width: 500px; /* Ancho máximo del contenedor de paginación */
 }
 
 #paginationAll .page-number {
@@ -107,3 +170,5 @@ main {
     background-color: #333;
     color: #fff;
 }
+
+

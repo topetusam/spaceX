@@ -30,8 +30,8 @@ function paginate(items, page) {
 function renderRockets(data, container) {
     const rocketsHtml = data.map(rocket => `
         <div class="rocket">
+        <h2 class="rocket-name">${rocket.name}</h2>
             <div class="rocket-group">
-                <h2 class="rocket-name">${rocket.name}</h2>
                 <p class="rocket-description">Description: ${rocket.description}</p>
                 <p class="rocket-height">Height: ${rocket.height.meters} meters / ${rocket.height.feet} feet</p>
                 <p class="rocket-diameter">Diameter: ${rocket.diameter.meters} meters / ${rocket.diameter.feet} feet</p>
@@ -47,9 +47,7 @@ function renderRockets(data, container) {
                 <h3>Engines</h3>
                 <p class="rocket-engines">Number: ${rocket.engines.number}</p>
                 <p class="rocket-engine-type">Type: ${rocket.engines.type}</p>
-                <p class="rocket-engine-version">Version: ${rocket.engines.version}</p>
-                <p class="rocket-propellant-1">Propellant 1: ${rocket.engines.propellant_1}</p>
-                <p class="rocket-propellant-2">Propellant 2: ${rocket.engines.propellant_2}</p>
+                
                 <p class="rocket-engine-thrust-sea-level">Thrust (Sea Level): ${rocket.engines.thrust_sea_level.kN} kN / ${rocket.engines.thrust_sea_level.lbf} lbf</p>
                 <p class="rocket-engine-thrust-vacuum">Thrust (Vacuum): ${rocket.engines.thrust_vacuum.kN} kN / ${rocket.engines.thrust_vacuum.lbf} lbf</p>
                 <h3>Landing Legs</h3>
@@ -66,10 +64,97 @@ function renderRockets(data, container) {
                 <p class="rocket-first-stage-reusable">Reusable: ${rocket.first_stage.reusable}</p>
             </div>
             <img class="rocket-image" src="${rocket.flickr_images.length > 0 ? rocket.flickr_images[0] : 'placeholder.jpg'}" alt="${rocket.name} image" style="width: 300px;" referrerpolicy="no-referrer">
-        </div>
+        <div class="rocket-table">
+    <table>
+        <tr>
+            <th>INFORMATION</th>
+            <th>ROCKET</th>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td id="rocket-type"></td>
+        </tr>
+        <tr>
+            <td>Rocket in service</td>
+            <td id="rocket-service"></td>
+        </tr>
+        <tr>
+            <td>Number of stages</td>
+            <td id="rocket-stages"></td>
+        </tr>
+        <tr>
+            <td>Number of propellants</td>
+            <td id="rocket-propellants"></td>
+        </tr>
+        <tr>
+            <td>Landing legs</td>
+            <td id="rocket-landing-legs"></td>
+        </tr>
+        <tr>
+            <td>Leg material</td>
+            <td id="rocket-leg-material"></td>
+        </tr>
+    </table>
+</div>
+  <div class="rocket-table1">
+    <table>
+        <tr>
+            <th>INFORMATION</th>
+            <th>ROCKET</th>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td id="rocket-engine-type"></td>
+        </tr>
+        <tr>
+            <td>Propellan 1</td>
+            <td id="rocket-service"></td>
+        </tr>
+        <tr>
+            <td>Propellan 2</td>
+            <td id="rocket-stages"></td>
+        </tr>
+        <tr>
+            <td>Cost per launch</td>
+            <td id="rocket-propellants"></td>
+        </tr>
+        <tr>
+            <td>Stage 1 fuel</td>
+            <td id="rocket-landing-legs"></td>
+        </tr>
+        <tr>
+            <td>stage 2 fuel</td>
+            <td id="rocket-leg-material"></td>
+        </tr>
+    </table>
+</div>
+            </div>
     `).join('');
 
     container.innerHTML = rocketsHtml;
+    // Actualiza la tabla con los datos específicos del cohete actual
+    const rocketTable = container.querySelector('.rocket-table');
+    if (rocketTable) {
+        const rocket = data[0]; // Considerando que data contiene un solo cohete por página
+        rocketTable.querySelector('#rocket-type').textContent = rocket.type;
+        rocketTable.querySelector('#rocket-service').textContent = rocket.active ? 'Active' : 'Inactive';
+        rocketTable.querySelector('#rocket-stages').textContent = rocket.stages;
+        rocketTable.querySelector('#rocket-propellants').textContent = rocket.engines.propellant_1 + ', ' + rocket.engines.propellant_2;
+        rocketTable.querySelector('#rocket-landing-legs').textContent = rocket.landing_legs.number;
+        rocketTable.querySelector('#rocket-leg-material').textContent = rocket.landing_legs.material || 'N/A';
+    }
+
+    // Actualiza la tabla con los datos específicos del cohete actual
+    const rocketTable1 = container.querySelector('.rocket-table1');
+    if (rocketTable1) {
+        const rocket = data[0]; // Considerando que data contiene un solo cohete por página
+        rocketTable1.querySelector('#rocket-engine-type').textContent = rocket.engines.type;
+        rocketTable1.querySelector('#rocket-service').textContent = rocket.active ? 'Active' : 'Inactive';
+        rocketTable1.querySelector('#rocket-stages').textContent = rocket.stages;
+        rocketTable1.querySelector('#rocket-propellants').textContent = rocket.cost_per_launch.toLocaleString();
+        rocketTable1.querySelector('#rocket-landing-legs').textContent = rocket.engines.propellant_1;
+        rocketTable1.querySelector('#rocket-leg-material').textContent = rocket.engines.propellant_2;
+    }
 }
 function setupPagination(totalItems, container) {
     const itemsPerPage = 1; // Mostrar un cohete por página
