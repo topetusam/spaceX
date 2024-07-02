@@ -9,7 +9,33 @@ body{
     background: rgb(134, 127, 127);
 }
 
+/* General Styles */
+.rocket {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
 
+/* Table Styles */
+.rocket-details {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.rocket-details th,
+.rocket-details td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.rocket-details th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
 
 
 
@@ -51,46 +77,30 @@ main {
     padding: 20px;
 }
 
-/* Rocket Module Styles */
-.rocket {
-
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.rocket img {
-    max-width: 100%;
-    border-radius: 8px;
-    
-}
-
-.rocket h2 {
-    color: #444;
-    text-align: center;
-}
-
-.rocket p {
-    color: #666;
-    margin: 5px 0;
-}
-
 /* Pagination Styles */
 #paginationAll {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+    right: 20px; /* Ajusta la distancia desde la parte derecha */
     display: flex;
-    justify-content: center;
-    margin: 20px 0;
+    overflow-x: auto; /* Habilitar scroll horizontal */
+    white-space: nowrap; /* Evitar que los botones se envuelvan */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 5px; /* Espacio interior alrededor de los botones */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 300px; /* Ancho máximo del contenedor de paginación */
 }
 
 #paginationAll .page-number {
     background-color: #fff;
     color: #333;
     border: 1px solid #333;
-    padding: 10px 20px;
-    margin: 0 5px;
+    padding: 5px 10px; /* Hacer los botones más pequeños */
+    margin: 0 2px; /* Reducir el margen entre botones */
     cursor: pointer;
     border-radius: 5px;
+    flex-shrink: 0; /* Evitar que los botones se encogen */
 }
 
 #paginationAll .page-number.active {
