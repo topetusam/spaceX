@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    background: rgb(134, 127, 127);
+    background: rgb(77, 144, 231);
 }
 
 /* General Styles */
@@ -16,10 +16,12 @@ body{
     grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 10px;
     justify-content: center;
-    border: 1px solid #ccc;
+    
     border-radius: 8px;
-    background-color: #625fe9;
+    background-color:  rgb(77, 144, 231);
+    margin: 20px;
 }
+
 
 
 
@@ -31,9 +33,49 @@ body{
     color: #fff;
 }
 
+
+.izquierda{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px 20px;
+    margin-top: 50px;
+}
+
+
+.derecha {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.progress-container h2 {
+    margin: 0;
+    margin-right: 10px;
+}
+
+progress {
+    flex-grow: 1;
+    margin-right: 10px;
+    height: 20px; /* Adjust the height as needed */
+}
+
+.progress-container span {
+    margin-left: 10px;
+}
+
+
 .rocket img {
-    width: 100px;
+    width: 100%;
     grid-column: 2;
+    grid-row: 2;
+    margin-left: 25%;
+
     
 }
 /* Table Styles */
