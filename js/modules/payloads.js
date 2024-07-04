@@ -30,7 +30,7 @@ export function renderPayloads(data, container) {
     const payloadsHtml = data.map(payload => `
         <div class="payload">
             <div class="payload-image">
-                <img src="/storage/img/naveop.svg">
+                <img src="storage/img/naveop.svg">
             </div>
             <div class="payload-details">
                 <h2>${payload.name}</h2>

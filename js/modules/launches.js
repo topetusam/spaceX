@@ -32,7 +32,7 @@ function renderLaunches(data, container) {
     const launchesHtml = data.map(launch => `
         <div class="launch">
         <div class="image-container">
-                <img src="../storage/img/naveop.svg" alt="SpaceX Image">
+                <img src="storage/img/naveop.svg" alt="SpaceX Image">
             </div>
             <h2>${launch.name}</h2>
             <p>Date UTC: ${launch.date_utc}</p>

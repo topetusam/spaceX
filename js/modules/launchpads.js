@@ -30,7 +30,7 @@ function renderLaunchpads(data, container) {
     const launchpadsHtml = data.map(launchpad => `
         <div class="launchpad">
             <div class="launchpad-image">
-                <img src="../storage/img/naveop.svg">
+                <img src="storage/img/naveop.svg">
             </div>
             <div class="launchpad-info">
                 <h2>${launchpad.name}</h2>
