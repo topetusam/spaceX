@@ -25,7 +25,7 @@ export function loadModuleData(container) {
                                 <a href="${data.links.elon_twitter}" target="_blank">Elon's Twitter</a>
                             </td></tr>
                         </table>
-                        <img src="/storage/img/Elon_Musk_(3018710552).jpg" alt="SpaceX Headquarters">
+                        <img src="storage/img/Elon_Musk_(3018710552).jpg" alt="SpaceX Headquarters">
                     </div>
                 </div>
             `;
