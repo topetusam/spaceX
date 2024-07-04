@@ -22,7 +22,7 @@ export function loadModuleData(container) {
                         <a href="${data.links.twitter}" target="_blank">Twitter</a>,
                         <a href="${data.links.elon_twitter}" target="_blank">Elon's Twitter</a>
                     </p>
-                    <img src="https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg" alt="SpaceX Headquarters" style="max-width: 100%; height: auto; margin-top: 10px;">
+                    <img src="/storage/img/Elon_Musk_(3018710552).jpg" alt="SpaceX Headquarters" style="max-width: 100%; height: auto; margin-top: 10px;">
                 </div>
             `;
 
@@ -32,3 +32,5 @@ export function loadModuleData(container) {
             console.error("Error fetching company data:", error);
         });
 }
+
+

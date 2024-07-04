@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    background: rgb(77, 144, 231);
+    background-image: url('/storage/img/giffondo.gif');
 }
 
 /* General Styles */
@@ -16,73 +16,87 @@ body{
     grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 10px;
     justify-content: center;
-    
     border-radius: 8px;
-    background-color:  rgb(77, 144, 231);
     margin: 20px;
+    color: #fff; /* Texto blanco */
 }
 
-
-
-
-.rocket-name{
+.rocket-name {
     grid-column: 2;
     text-align: center;
     font-size: 50px;
     font-weight: bold;
-    color: #fff;
+    color: #fff; /* Texto blanco */
 }
 
-
-.izquierda{
+.izquierda {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 2;
     padding: 20px 20px;
     margin-top: 50px;
+    color: #fff; /* Texto blanco */
 }
-
 
 .derecha {
     width: 100%;
+    grid-column: 3;
+    grid-row: 2;
     max-width: 600px;
     margin: 0 auto;
+    color: #fff; /* Texto blanco */
 }
 
 .progress-container {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    color: #fff; /* Texto blanco */
 }
 
 .progress-container h2 {
     margin: 0;
     margin-right: 10px;
+    color: #fff; /* Texto blanco */
 }
 
 progress {
     flex-grow: 1;
     margin-right: 10px;
-    height: 20px; /* Adjust the height as needed */
+    height: 20px; /* Ajustar la altura según sea necesario */
 }
 
 .progress-container span {
     margin-left: 10px;
+    color: #fff; /* Texto blanco */
 }
 
-
 .rocket img {
-    width: 100%;
+    width: 80%; /* Ajustar el porcentaje según sea necesario */
     grid-column: 2;
     grid-row: 2;
-    margin-left: 25%;
+    margin-left: 25%; /* Ajustar el margen izquierdo según sea necesario */
+}
 
-    
+.rocket .naveop{
+    width: 80%; /* Ajustar el porcentaje según sea necesario */
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 25%; /* Ajustar el margen izquierdo según sea necesario */
+}
+
+.naveop{
+    width: 80%; /* Ajustar el porcentaje según sea necesario */
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 25%; /* Ajustar el margen izquierdo según sea necesario */
+
 }
 /* Table Styles */
 .rocket-details {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    color: #fff; /* Texto blanco */
 }
 
 .rocket-details th,
@@ -90,18 +104,21 @@ progress {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    color: #fff; /* Texto blanco */
 }
 
 .rocket-details th {
     background-color: #f2f2f2;
     font-weight: bold;
+    color: #333; /* Color de texto específico para los encabezados */
 }
 
 /*tabla*/
 .rocket-table {
     margin-top: 20px;
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 3;
+    color: #fff; /* Texto blanco */
 }
 
 .rocket-table table {
@@ -109,22 +126,26 @@ progress {
     border-collapse: collapse;
 }
 
-.rocket-table th, .rocket-table td {
+.rocket-table th,
+.rocket-table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    color: #fff; /* Texto blanco */
 }
 
 .rocket-table th {
     background-color: #f2f2f2;
     font-weight: bold;
+    color: #333; /* Color de texto específico para los encabezados */
 }
 
 /*tabla2*/
 .rocket-table1 {
     margin-top: 20px;
     grid-column: 3;
-    grid-row: 2;
+    grid-row: 3;
+    color: #fff; /* Texto blanco */
 }
 
 .rocket-table1 table {
@@ -132,51 +153,71 @@ progress {
     border-collapse: collapse;
 }
 
-.rocket-table1 th, .rocket-table1 td {
+.rocket-table1 th,
+.rocket-table1 td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    color: #fff; /* Texto blanco */
 }
 
 .rocket-table1 th {
     background-color: #f2f2f2;
     font-weight: bold;
+    color: #333; /* Color de texto específico para los encabezados */
 }
 
 
 
 footer {
-    background-color: #333; /* Color de fondo del footer */
-    padding: 20px; /* Espaciado interior */
-    border-top: 1px solid #555; /* Borde superior */
+    background-color: #141313; /* Color de fondo oscuro */
+    padding: 20px;
+    border-top: 1px solid #222; /* Borde más oscuro */
     position: fixed;
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centrar exactamente */
     bottom: 0;
-    width: 100%;
+    width: 60%; /* Ancho del footer */
+    border-radius: 12px; /* Borde redondeado */
 }
 
 #moduleLinks {
-    list-style: none; 
+    list-style-type: none;
     padding: 0;
-    margin: 0;
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: space-around;
 }
 
 #moduleLinks li {
-    margin: 0 10px; 
+    margin: 0;
+    text-align: center; /* Centra el contenido dentro de cada elemento */
 }
 
 #moduleLinks a {
-    color: #fff; 
-    text-decoration: none; 
-    display: flex; 
-    align-items: center; 
+    display: flex; /* Usa flexbox para alinear elementos verticalmente */
+    flex-direction: column; /* Coloca la imagen encima del texto */
+    align-items: center; /* Centra los elementos verticalmente */
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 10px; /* Aumenta el área de clic */
+    border-radius: 20px; /* Borde redondeado */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición de color de fondo y sombra */
 }
 
-#moduleLinks a i {
-    margin-right: 5px; 
-    font-size: 18px; 
+#moduleLinks a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Cambia el color de fondo al pasar el cursor */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Añade sombra al hacer hover */
 }
+
+#moduleLinks img {
+    width: 40px; /* Tamaño de la imagen */
+    margin-bottom: 25px; /* Espacio opcional entre la imagen y el texto */
+}
+
+#moduleLinks span {
+    font-size: 25px; /* Tamaño del texto */
+}
+
 
 main {
     padding: 20px;

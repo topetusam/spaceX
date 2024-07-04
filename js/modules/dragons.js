@@ -11,7 +11,7 @@ export function loadModuleData(container, page) {
         })
         .then(data => {
             const paginatedData = paginate(data, currentPage);
-            renderDragons(paginatedData, container);
+            renderDragons(paginatedData, container, currentPage);
             setupPagination(data.length, container);
         })
         .catch(error => {
@@ -26,8 +26,12 @@ function paginate(items, page) {
     return items.slice(start, end);
 }
 
-export function renderDragons(data, container) {
-    const dragonsHtml = data.map(dragon => `
+export function renderDragons(data, container, page) {
+    const dragon = data[0]; // Asumimos que solo hay un dragón por página
+    const image1Visibility = page === 1 ? 'block' : 'none';
+    const image2Visibility = page === 2 ? 'block' : 'none';
+
+    const dragonHtml = `
         <div class="dragon">
             <h2>${dragon.name}</h2>
             <p>Active: ${dragon.active ? 'Yes' : 'No'}</p>
@@ -38,10 +42,12 @@ export function renderDragons(data, container) {
             <p>Pressurized Capsule: ${dragon.pressurized_capsule ? 'Yes' : 'No'}</p>
             <p>Heat Shield Material: ${dragon.heat_shield.material}</p>
             <p>Wikipedia: <a href="${dragon.wikipedia}" target="_blank">${dragon.wikipedia}</a></p>
+            <img src="/storage/img/DRAGON1.jpg" alt="${dragon.name} image" style="display: ${image1Visibility};">
+            <img src="/storage/img/DRAGON2.jpg" alt="${dragon.name} image" style="display: ${image2Visibility};">
         </div>
-    `).join('');
+    `;
 
-    container.innerHTML = dragonsHtml;
+    container.innerHTML = dragonHtml;
 }
 
 function setupPagination(totalItems, container) {
