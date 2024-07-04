@@ -391,11 +391,11 @@ main {
 .core-table td {
     padding: 12px;
     border: 1px solid #ddd;
-    color: #ffffff; /* Color de texto */
+    color: #dddddd; /* Color de texto */
 }
 
 .core-table th {
-    background-color: #f2f2f2;
+    background-color: #131212;
     font-weight: bold;
 }
 
