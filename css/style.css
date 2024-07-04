@@ -519,11 +519,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .dragon-images img {
-    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    width: 70%; /* Ajusta la imagen al ancho del contenedor */
     height: auto;
     max-width: 600px; /* Ajusta el ancho máximo de la imagen */
     border-radius: 8px;
@@ -532,7 +532,7 @@ main {
 }
 
 .dragon-table {
-    width: 100%; /* Ancho del contenedor de la tabla */
+    width: 70%; /* Ancho del contenedor de la tabla */
     margin-top: 20px;
     border-collapse: collapse;
     text-align: center; /* Centra el texto dentro de la tabla */
