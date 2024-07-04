@@ -30,7 +30,7 @@ function renderLandpads(data, container) {
     const landpadsHtml = data.map(landpad => `
         <div class="landpad">
             <div class="image-container">
-                <img src="/storage/img/naveop.svg" alt="SpaceX Image">
+                <img src="../storage/img/naveop.svg" alt="SpaceX Image">
             </div>
             <div class="landpad-info">
                 <h2>${landpad.name}</h2>

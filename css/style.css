@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url('/storage/img/giffondo.gif');
+    background-image: url('../storage/img/giffondo.gif');
 }
 
 /* General Styles */

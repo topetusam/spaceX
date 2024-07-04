@@ -32,7 +32,7 @@ function renderHistory(data, container) {
     const historyHtml = data.map(event => `
         <div class="history">
             <div class="image-container">
-                <img src="/storage/img/naveop.svg" alt="SpaceX Image">
+                <img src="../storage/img/naveop.svg" alt="SpaceX Image">
             </div>
             <div class="history-event">
                 <h2>${event.title}</h2>

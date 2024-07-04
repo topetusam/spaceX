@@ -29,7 +29,7 @@ function paginate(items, page) {
 function renderCores(data, container) {
     const coresHtml = `
         <div class="image-container">
-            <img src="/storage/img/naveop.svg" alt="SpaceX Image">
+            <img src="../storage/img/naveop.svg" alt="SpaceX Image">
         </div>
         <div class="core-container">
             <table class="core-table">
