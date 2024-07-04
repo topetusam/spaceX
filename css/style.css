@@ -31,7 +31,7 @@ body{
 
 .izquierda {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1;
     padding: 20px 20px;
     margin-top: 50px;
     color: #fff; /* Texto blanco */
@@ -40,7 +40,7 @@ body{
 .derecha {
     width: 100%;
     grid-column: 3;
-    grid-row: 2;
+    grid-row: 1;
     max-width: 600px;
     margin: 0 auto;
     color: #fff; /* Texto blanco */
@@ -117,7 +117,7 @@ progress {
 .rocket-table {
     margin-top: 20px;
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 2;
     color: #fff; /* Texto blanco */
 }
 
@@ -144,7 +144,7 @@ progress {
 .rocket-table1 {
     margin-top: 20px;
     grid-column: 3;
-    grid-row: 3;
+    grid-row: 2;
     color: #fff; /* Texto blanco */
 }
 
@@ -158,64 +158,66 @@ progress {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
-    color: #fff; /* Texto blanco */
+    color: #fff; 
 }
 
 .rocket-table1 th {
     background-color: #f2f2f2;
     font-weight: bold;
-    color: #333; /* Color de texto específico para los encabezados */
+    color: #333; 
 }
 
 
 
 footer {
-    background-color: #141313; /* Color de fondo oscuro */
-    padding: 20px;
-    border-top: 1px solid #222; /* Borde más oscuro */
+    background-color: #141313;
+    padding: 10px; 
+    border-top: 1px solid #222;
     position: fixed;
-    left: 50%; /* Centrar horizontalmente */
-    transform: translateX(-50%); /* Ajuste para centrar exactamente */
+    left: 0;
+    right: 0;
     bottom: 0;
-    width: 60%; /* Ancho del footer */
-    border-radius: 12px; /* Borde redondeado */
+    width: 70%; 
+    margin: 0 auto; 
+    border-radius: 12px;
+    z-index: 1000; 
 }
 
 #moduleLinks {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center; 
 }
 
 #moduleLinks li {
-    margin: 0;
-    text-align: center; /* Centra el contenido dentro de cada elemento */
+    margin: 0 8px; 
+    text-align: center;
 }
 
 #moduleLinks a {
-    display: flex; /* Usa flexbox para alinear elementos verticalmente */
-    flex-direction: column; /* Coloca la imagen encima del texto */
-    align-items: center; /* Centra los elementos verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
     color: #fff;
-    padding: 10px 10px; /* Aumenta el área de clic */
-    border-radius: 20px; /* Borde redondeado */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición de color de fondo y sombra */
+    padding: 8px 20px; 
+    border-radius: 15px; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #moduleLinks a:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Cambia el color de fondo al pasar el cursor */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Añade sombra al hacer hover */
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 #moduleLinks img {
-    width: 40px; /* Tamaño de la imagen */
-    margin-bottom: 25px; /* Espacio opcional entre la imagen y el texto */
+    width: 25px; 
+    margin-bottom: 4px; 
 }
 
 #moduleLinks span {
-    font-size: 25px; /* Tamaño del texto */
+    font-size: 20px; 
 }
 
 
@@ -226,7 +228,7 @@ main {
 /* Pagination Styles */
 #paginationAll {
     position: fixed;
-    bottom: 65px; /* Ajusta la distancia desde la parte inferior */
+    bottom: 90px; /* Ajusta la distancia desde la parte inferior */
     right: 5px; /* Ajusta la distancia desde la parte derecha */
     display: flex;
     overflow-x: auto; /* Habilitar scroll horizontal */
