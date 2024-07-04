@@ -913,7 +913,7 @@ main {
 }
 
 .ship-details th {
-    background-color: #007bff;
+    background-color: #ffffff;
     color: white;
 }
 
@@ -923,37 +923,61 @@ main {
 
 
 
-/* CSS para el módulo Starlink */
-/* CSS para el módulo Starlink */
+/* Estilos mejorados para el módulo de Starlink */
 
-/* Estilos generales */
-/* CSS para el módulo Starlink */
-
+/* Contenedor general para cada elemento de Starlink */
+/* Contenedor general para cada elemento de Starlink */
 .starlink {
-    background-color: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    text-align: left;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; /* Centrar texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.starlink h2 {
-    font-size: 24px;
+.starlink:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la imagen de Starlink */
+.starlink-image {
+    text-align: center;
     margin-bottom: 10px;
 }
 
-.starlink p {
-    font-size: 18px;
-    margin-bottom: 8px;
+/* Estilos mejorados para la tabla de detalles de Starlink */
+
+.starlink-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    background-color: #fff; /* Fondo blanco */
 }
 
-.starlink img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-top: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+.starlink-table th,
+.starlink-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
+.starlink-table th {
+    background-color: #f2f2f2; /* Fondo gris claro para las cabeceras */
+    color: #333; /* Texto oscuro */
+}
 
+.starlink-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fondo gris más claro para filas pares */
+}
+
+.starlink-table td {
+    color: #333; /* Texto oscuro */
+}

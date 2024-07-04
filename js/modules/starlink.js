@@ -1,6 +1,3 @@
-// js/modules/starlink.js
-// js/modules/starlink.js
-
 let currentPage = 1;
 
 export function loadModuleData(container, page) {
@@ -33,11 +30,51 @@ function renderStarlinks(data, container) {
     const starlinkHtml = data.map(link => `
         <div class="starlink">
             <h2>${link.spaceTrack.OBJECT_NAME}</h2>
-            <p>Current Altitude: ${link.spaceTrack.MEAN_ALTITUDE_KM} km</p>
-            <p>Latitude: ${link.latitude}</p>
-            <p>Longitude: ${link.longitude}</p>
-            <p>Spacecraft Type: ${link.spaceTrack.OBJECT_TYPE}</p>
-            <p>NORAD ID: ${link.spaceTrack.OBJECT_ID}</p>
+            ${link.spaceTrack.IMAGE ? `<div class="starlink-image"><img src="${link.spaceTrack.IMAGE}" alt="${link.spaceTrack.OBJECT_NAME}" style="max-width: 100%;" referrerPolicy="no-referrer"></div>` : ''}
+            <div class="starlink-table">
+                <table>
+                    <tr>
+                        <th>Current Altitude</th>
+                        <td>${link.spaceTrack.MEAN_ALTITUDE_KM} km</td>
+                    </tr>
+                    <tr>
+                        <th>Latitude</th>
+                        <td>${link.latitude}</td>
+                    </tr>
+                    <tr>
+                        <th>Longitude</th>
+                        <td>${link.longitude}</td>
+                    </tr>
+                    <tr>
+                        <th>Spacecraft Type</th>
+                        <td>${link.spaceTrack.OBJECT_TYPE}</td>
+                    </tr>
+                    <tr>
+                        <th>NORAD ID</th>
+                        <td>${link.spaceTrack.OBJECT_ID}</td>
+                    </tr>
+                    <tr>
+                        <th>Launch Date</th>
+                        <td>${link.spaceTrack.LAUNCH_DATE}</td>
+                    </tr>
+                    <tr>
+                        <th>Launch Vehicle</th>
+                        <td>${link.spaceTrack.LAUNCH_VEHICLE}</td>
+                    </tr>
+                    <tr>
+                        <th>Orbit</th>
+                        <td>${link.spaceTrack.ORBIT}</td>
+                    </tr>
+                    <tr>
+                        <th>Apogee Height</th>
+                        <td>${link.spaceTrack.APOGEE_HEIGHT_KM} km</td>
+                    </tr>
+                    <tr>
+                        <th>Perigee Height</th>
+                        <td>${link.spaceTrack.PERIGEE_HEIGHT_KM} km</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     `).join('');
 
