@@ -26,7 +26,7 @@ function paginate(items, page) {
     return items.slice(start, end);
 }
 
-function renderDragons(data, container) {
+export function renderDragons(data, container) {
     const dragonsHtml = data.map(dragon => `
         <div class="dragon">
             <h2>${dragon.name}</h2>

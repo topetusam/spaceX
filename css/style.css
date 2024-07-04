@@ -214,3 +214,528 @@ main {
 }
 
 
+/* estilo para capsules */
+.capsule-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Ajustar el ancho máximo según sea necesario */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.capsule-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.capsule-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.capsule-container th, .capsule-container td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.capsule-container th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.capsule-container img {
+    max-width: 100%; /* Ajustar la imagen al ancho máximo del contenedor */
+    height: auto;
+    border-radius: 8px;
+    display: block; /* Asegurar que la imagen se muestre como bloque */
+    margin: 10px auto; /* Añadir margen alrededor de la imagen */
+}
+
+
+/* estilo para company */
+.company-info {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Para manejar el wrap de los elementos */
+}
+
+.company-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+.company-info p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+.company-info a {
+    margin-right: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.company-info a:hover {
+    text-decoration: underline;
+}
+
+.company-info img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+
+/* estilo para cores */
+.core {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.core h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.core p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+
+
+/* estilo para crew */
+.crew-member {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.crew-member img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.crew-info {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.crew-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.crew-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.crew-info th,
+.crew-info td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    text-align: center;
+}
+
+.crew-info th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    text-align: center;
+}
+
+.crew-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.crew-info a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+
+/* estilo para dragons */
+
+.dragon {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.dragon:hover {
+    transform: translateY(-5px);
+}
+
+.dragon h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.dragon p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.dragon a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dragon a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+
+/* estilo para history */
+.history-event {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.history-event:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.history-event h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.history-event p {
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.history-event a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.history-event a:hover {
+    text-decoration: underline;
+}
+
+
+/* css para landpads*/
+.landpad {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.landpad:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.landpad h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.landpad p {
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.landpad a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.landpad a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Launches */
+.launch {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.launch:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.launch h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.launch p {
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.launch ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.launch ul li {
+    margin-bottom: 5px;
+}
+
+.launch a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.launch a:hover {
+    text-decoration: underline;
+}
+
+
+/* launchpads */
+.launchpad {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.launchpad:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.launchpad h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.launchpad p {
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.launchpad a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.launchpad a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* pagina de payloads */
+/* Estilos mejorados para el módulo de payloads */
+
+/* Contenedor general */
+.payloads-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para cada payload */
+.payload {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payload:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.payload h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.payload p {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.payload a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.payload a:hover {
+    color: #0056b3;
+}
+
+/* Estilos para la paginación */
+
+/* Estilos mejorados para el módulo de ships */
+
+/* Contenedor general */
+.ships-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para cada ship */
+.ship {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ship:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ship h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ship p {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.ship img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la tabla de detalles */
+.ship-details {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.ship-details th,
+.ship-details td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.ship-details th {
+    background-color: #007bff;
+    color: white;
+}
+
+.ship-details tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+/* CSS para el módulo Starlink */
+/* CSS para el módulo Starlink */
+
+/* Estilos generales */
+/* CSS para el módulo Starlink */
+
+.starlink {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.starlink h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.starlink p {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.starlink img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+

@@ -37,7 +37,7 @@ function renderShips(data, container) {
             <p>Active: ${ship.active ? 'Yes' : 'No'}</p>
             <p>Home Port: ${ship.home_port}</p>
             <p>Details: ${ship.details}</p>
-            <p>Image: <img src="${ship.image}" alt="${ship.name}" style="max-width: 300px;" referrerpolicy="no-referrer"></p>
+             <p><img src="${ship.image}" alt="${ship.name}" style="max-width: 300px;" referrerpolicy="no-referrer"></p>
 
         </div>
     `).join('');

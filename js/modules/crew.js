@@ -29,11 +29,40 @@ function paginate(items, page) {
 function renderCrew(data, container) {
     const crewHtml = data.map(member => `
         <div class="crew-member">
-            <h2>${member.name}</h2>
-            <p>Status: ${member.status}</p>
-            <p>Agency: ${member.agency}</p>
-            <p>Image: <img src="${member.image}" alt="${member.name}" style="max-width: 300px;" referrerPolicy="no-referrer"></p>
-            <p>Wikipedia: <a href="${member.wikipedia}" target="_blank">${member.wikipedia}</a></p>
+            <img src="${member.image}" alt="${member.name}" referrerPolicy="no-referrer">
+            <div class="crew-info">
+                <h2>${member.name}</h2>
+                <table>
+                    <tr>
+                        <th>Agency:</th>
+                        <td>${member.agency}</td>
+                    </tr>
+                    <tr>
+                        <th>Status:</th>
+                        <td>${member.status}</td>
+                    </tr>
+                    <tr>
+                        <th>Launches:</th>
+                        <td>${member.launches.length}</td>
+                    </tr>
+                    <tr>
+                        <th>Wikipedia:</th>
+                        <td><a href="${member.wikipedia}" target="_blank">${member.wikipedia}</a></td>
+                    </tr>
+                    <tr>
+                        <th>Twitter:</th>
+                        <td><a href="${member.twitter}" target="_blank">${member.twitter}</a></td>
+                    </tr>
+                    <tr>
+                        <th>Instagram:</th>
+                        <td><a href="${member.instagram}" target="_blank">${member.instagram}</a></td>
+                    </tr>
+                    <tr>
+                        <th>Facebook:</th>
+                        <td><a href="${member.facebook}" target="_blank">${member.facebook}</a></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     `).join('');
 

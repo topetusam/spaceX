@@ -1,5 +1,3 @@
-// js/modules/company.js
-
 export function loadModuleData(container) {
     fetch("https://api.spacexdata.com/v4/company")
         .then(response => {
@@ -16,7 +14,7 @@ export function loadModuleData(container) {
                     <p>Founded: ${data.founded}</p>
                     <p>Employees: ${data.employees}</p>
                     <p>CEO: ${data.ceo}</p>
-                    <p>Valuation: $${data.valuation}</p>
+                    <p>Valuation: $${data.valuation.toLocaleString()}</p>
                     <p>Summary: ${data.summary}</p>
                     <p>Headquarters: ${data.headquarters.address}, ${data.headquarters.city}, ${data.headquarters.state}</p>
                     <p>Links: 
@@ -24,6 +22,7 @@ export function loadModuleData(container) {
                         <a href="${data.links.twitter}" target="_blank">Twitter</a>,
                         <a href="${data.links.elon_twitter}" target="_blank">Elon's Twitter</a>
                     </p>
+                    <img src="https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg" alt="SpaceX Headquarters" style="max-width: 100%; height: auto; margin-top: 10px;">
                 </div>
             `;
 
