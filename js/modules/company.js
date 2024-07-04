@@ -8,21 +8,25 @@ export function loadModuleData(container) {
         })
         .then(data => {
             const companyHtml = `
-                <div class="company-info">
-                    <h2>${data.name}</h2>
-                    <p>Founder: ${data.founder}</p>
-                    <p>Founded: ${data.founded}</p>
-                    <p>Employees: ${data.employees}</p>
-                    <p>CEO: ${data.ceo}</p>
-                    <p>Valuation: $${data.valuation.toLocaleString()}</p>
-                    <p>Summary: ${data.summary}</p>
-                    <p>Headquarters: ${data.headquarters.address}, ${data.headquarters.city}, ${data.headquarters.state}</p>
-                    <p>Links: 
-                        <a href="${data.links.website}" target="_blank">Website</a>,
-                        <a href="${data.links.twitter}" target="_blank">Twitter</a>,
-                        <a href="${data.links.elon_twitter}" target="_blank">Elon's Twitter</a>
-                    </p>
-                    <img src="/storage/img/Elon_Musk_(3018710552).jpg" alt="SpaceX Headquarters" style="max-width: 100%; height: auto; margin-top: 10px;">
+                 <div class="container">
+                    <div class="company-info">
+                        <h2>${data.name}</h2>
+                        <table class="company-table">
+                            <tr><th>Founder</th><td>${data.founder}</td></tr>
+                            <tr><th>Founded</th><td>${data.founded}</td></tr>
+                            <tr><th>Employees</th><td>${data.employees}</td></tr>
+                            <tr><th>CEO</th><td>${data.ceo}</td></tr>
+                            <tr><th>Valuation</th><td>$${data.valuation.toLocaleString()}</td></tr>
+                            <tr><th>Summary</th><td class="summary">${data.summary}</td></tr>
+                            <tr><th>Headquarters</th><td>${data.headquarters.address}, ${data.headquarters.city}, ${data.headquarters.state}</td></tr>
+                            <tr><th>Links</th><td>
+                                <a href="${data.links.website}" target="_blank">Website</a>,
+                                <a href="${data.links.twitter}" target="_blank">Twitter</a>,
+                                <a href="${data.links.elon_twitter}" target="_blank">Elon's Twitter</a>
+                            </td></tr>
+                        </table>
+                        <img src="/storage/img/Elon_Musk_(3018710552).jpg" alt="SpaceX Headquarters">
+                    </div>
                 </div>
             `;
 

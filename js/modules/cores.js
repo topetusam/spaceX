@@ -27,20 +27,41 @@ function paginate(items, page) {
 }
 
 function renderCores(data, container) {
-    const coresHtml = data.map(core => `
-        <div class="core">
-            <h2>${core.serial}</h2>
-            <p>Block: ${core.block}</p>
-            <p>Status: ${core.status}</p>
-            <p>Original Launch: ${core.original_launch ? core.original_launch : 'N/A'}</p>
-            <p>Reuse Count: ${core.reuse_count}</p>
-            <p>RTLS Attempts: ${core.rtls_attempts}</p>
-            <p>RTLS Landings: ${core.rtls_landings}</p>
-            <p>ASDS Attempts: ${core.asds_attempts}</p>
-            <p>ASDS Landings: ${core.asds_landings}</p>
-            <p>Details: ${core.details}</p>
+    const coresHtml = `
+        <div class="image-container">
+            <img src="/storage/img/naveop.svg" alt="SpaceX Image">
         </div>
-    `).join('');
+        <div class="core-container">
+            <table class="core-table">
+                <tr>
+                    <th>Serial</th>
+                    <th>Block</th>
+                    <th>Status</th>
+                    <th>Original Launch</th>
+                    <th>Reuse Count</th>
+                    <th>RTLS Attempts</th>
+                    <th>RTLS Landings</th>
+                    <th>ASDS Attempts</th>
+                    <th>ASDS Landings</th>
+                    <th>Details</th>
+                </tr>
+                ${data.map(core => `
+                    <tr>
+                        <td>${core.serial}</td>
+                        <td>${core.block}</td>
+                        <td>${core.status}</td>
+                        <td>${core.original_launch ? core.original_launch : 'N/A'}</td>
+                        <td>${core.reuse_count}</td>
+                        <td>${core.rtls_attempts}</td>
+                        <td>${core.rtls_landings}</td>
+                        <td>${core.asds_attempts}</td>
+                        <td>${core.asds_landings}</td>
+                        <td>${core.details}</td>
+                    </tr>
+                `).join('')}
+            </table>
+        </div>
+    `;
 
     container.innerHTML = coresHtml;
 }
