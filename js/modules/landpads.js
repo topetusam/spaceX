@@ -29,18 +29,24 @@ function paginate(items, page) {
 function renderLandpads(data, container) {
     const landpadsHtml = data.map(landpad => `
         <div class="landpad">
-            <h2>${landpad.name}</h2>
-            <p>Full Name: ${landpad.full_name}</p>
-            <p>Location: ${landpad.locality}, ${landpad.region}</p>
-            <p>Successful Landings: ${landpad.successful_landings}</p>
-            <p>Attempted Landings: ${landpad.attempted_landings}</p>
-            <p>Details: ${landpad.details}</p>
-            <p>Wikipedia: <a href="${landpad.wikipedia}" target="_blank">${landpad.wikipedia}</a></p>
+            <div class="image-container">
+                <img src="/storage/img/naveop.svg" alt="SpaceX Image">
+            </div>
+            <div class="landpad-info">
+                <h2>${landpad.name}</h2>
+                <p>Full Name: ${landpad.full_name}</p>
+                <p>Location: ${landpad.locality}, ${landpad.region}</p>
+                <p>Successful Landings: ${landpad.successful_landings}</p>
+                <p>Attempted Landings: ${landpad.attempted_landings}</p>
+                <p>Details: ${landpad.details}</p>
+                <p>Wikipedia: <a href="${landpad.wikipedia}" target="_blank">${landpad.wikipedia}</a></p>
+            </div>
         </div>
     `).join('');
 
     container.innerHTML = landpadsHtml;
 }
+
 
 function setupPagination(totalItems, container) {
     const itemsPerPage = 1; // Mostrar un landpad por página

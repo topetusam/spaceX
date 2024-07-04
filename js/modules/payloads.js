@@ -26,23 +26,29 @@ function paginate(items, page) {
     return items.slice(start, end);
 }
 
-function renderPayloads(data, container) {
+export function renderPayloads(data, container) {
     const payloadsHtml = data.map(payload => `
         <div class="payload">
-            <h2>${payload.name}</h2>
-            <p>Type: ${payload.type}</p>
-            <p>Customers: ${payload.customers.join(', ')}</p>
-            <p>Nationality: ${payload.nationality}</p>
-            <p>Manufacturer: ${payload.manufacturer}</p>
-            <p>Orbit: ${payload.orbit}</p>
-            <p>Reference System: ${payload.reference_system}</p>
-            <p>Mass: ${payload.mass_kg} kg</p>
-            <p>Details: ${payload.details}</p>
+            <div class="payload-image">
+                <img src="/storage/img/naveop.svg">
+            </div>
+            <div class="payload-details">
+                <h2>${payload.name}</h2>
+                <p>Type: ${payload.type}</p>
+                <p>Customers: ${payload.customers.join(', ')}</p>
+                <p>Nationality: ${payload.nationality}</p>
+                <p>Manufacturer: ${payload.manufacturer}</p>
+                <p>Orbit: ${payload.orbit}</p>
+                <p>Reference System: ${payload.reference_system}</p>
+                <p>Mass: ${payload.mass_kg} kg</p>
+                <p>Details: ${payload.details}</p>
+            </div>
         </div>
     `).join('');
 
     container.innerHTML = payloadsHtml;
 }
+
 
 function setupPagination(totalItems, container) {
     const itemsPerPage = 1; // Mostrar un payload por página

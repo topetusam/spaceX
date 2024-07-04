@@ -29,6 +29,9 @@ function paginate(items, page) {
 function renderLaunchpads(data, container) {
     const launchpadsHtml = data.map(launchpad => `
         <div class="launchpad">
+            <div class="launchpad-image">
+                <img src="/storage/img/naveop.svg">
+            </div>
             <div class="launchpad-info">
                 <h2>${launchpad.name}</h2>
                 <p>Full Name: ${launchpad.full_name}</p>
@@ -39,14 +42,12 @@ function renderLaunchpads(data, container) {
                 <p>Successful Launches: ${launchpad.successful_launches}</p>
                 <p>Wikipedia: <a href="${launchpad.wikipedia}" target="_blank">${launchpad.wikipedia}</a></p>
             </div>
-            <div class="launchpad-image">
-                <img src="${launchpad.image}" alt="${launchpad.name}" style="max-width: 100%;" referrerPolicy="no-referrer">
-            </div>
         </div>
     `).join('');
 
     container.innerHTML = launchpadsHtml;
 }
+
 
 function setupPagination(totalItems, container) {
     const itemsPerPage = 1; // Mostrar una plataforma de lanzamiento por página

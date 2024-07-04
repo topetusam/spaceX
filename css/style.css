@@ -468,10 +468,11 @@ main {
 
 
 
-/* estilo para dragons */
+/* Estilo para dragons */
+
+/* Estilo para dragons */
 
 .dragon {
-    background-color: #f5f5f5;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -481,6 +482,8 @@ main {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease;
+    background-color: transparent; /* Quita el fondo blanco */
+    color: #fff; /* Cambia el color del texto a blanco */
 }
 
 .dragon:hover {
@@ -490,7 +493,6 @@ main {
 .dragon h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #333;
     text-align: center;
 }
 
@@ -511,108 +513,195 @@ main {
     color: #0056b3;
 }
 
-
-/* estilo para history */
-.history-event {
-    background-color: #f5f5f5;
-    padding: 20px;
+.dragon-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
+}
+
+.dragon-images img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto;
+    max-width: 600px; /* Ajusta el ancho máximo de la imagen */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.history-event:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-.history-event h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.history-event p {
-    line-height: 1.6;
-    margin-bottom: 8px;
-}
-
-.history-event a {
-    color: #007bff;
-    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-right: 10px;
 }
 
-.history-event a:hover {
-    text-decoration: underline;
+.dragon-table {
+    width: 100%; /* Ancho del contenedor de la tabla */
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center; /* Centra el texto dentro de la tabla */
+}
+
+.dragon-table th,
+.dragon-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    text-align: center;
+}
+
+.dragon-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.dragon-table td {
+    text-align: center;
 }
 
 
-/* css para landpads*/
-.landpad {
-    background-color: #f5f5f5;
+/* Estilo para history */
+
+.history {
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Fondo transparente */
+}
+
+.history:hover {
+    transform: translateY(-5px);
+}
+
+.history h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff; /* Color blanco para el texto */
+    text-align: center;
+}
+
+.history p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #fff; /* Color blanco para el texto */
+    text-align: center;
+}
+
+.history a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.history a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 50%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Estilo para landpads */
+
+.landpad {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Fondo transparente */
 }
 
 .landpad:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 .landpad h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #fff; /* Texto blanco */
+    text-align: center;
 }
 
 .landpad p {
-    line-height: 1.6;
     margin-bottom: 8px;
+    line-height: 1.6;
+    color: #fff; /* Texto blanco */
+    text-align: center;
 }
 
 .landpad a {
     color: #007bff;
     text-decoration: none;
-    margin-right: 10px;
+    transition: color 0.3s ease;
 }
 
 .landpad a:hover {
     text-decoration: underline;
+    color: #0056b3;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 50%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
 
-/* Launches */
+/* Estilo para launches */
+
 .launch {
-    background-color: #f5f5f5;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Fondo transparente */
 }
 
 .launch:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 .launch h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #fff; /* Texto blanco */
+    text-align: center;
 }
 
 .launch p {
-    line-height: 1.6;
     margin-bottom: 8px;
+    line-height: 1.6;
+    color: #fff; /* Texto blanco */
+    text-align: center;
 }
 
 .launch ul {
     list-style-type: none;
     padding: 0;
+    text-align: center; /* Centrar la lista */
 }
 
 .launch ul li {
@@ -627,32 +716,52 @@ main {
 
 .launch a:hover {
     text-decoration: underline;
+    color: #0056b3;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 70%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
-/* launchpads */
+
+/* Estilo para launchpads */
+
 .launchpad {
-    background-color: #f9f9f9;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Fondo transparente */
 }
 
 .launchpad:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 .launchpad h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #fff; /* Texto blanco */
+    text-align: center;
 }
 
 .launchpad p {
-    line-height: 1.6;
     margin-bottom: 8px;
+    line-height: 1.6;
+    color: #fff; /* Texto blanco */
+    text-align: center;
 }
 
 .launchpad a {
@@ -663,30 +772,43 @@ main {
 
 .launchpad a:hover {
     text-decoration: underline;
+    color: #0056b3;
+}
+
+.launchpad-image {
+    margin-bottom: 20px;
+    width: 100%; /* Ajusta el ancho del contenedor de la imagen */
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.launchpad-image img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
-
-/* pagina de payloads */
 /* Estilos mejorados para el módulo de payloads */
 
-/* Contenedor general */
-.payloads-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
+/* Estilos para el contenedor general de payload */
+/* Estilos mejorados para el módulo de payloads */
 
-/* Estilos para cada payload */
+/* Estilos para el contenedor general de payload */
 .payload {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* Fondo transparente */
+    color: #fff; /* Texto blanco */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -695,29 +817,39 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.payload h2 {
-    font-size: 1.8rem;
+/* Estilos para la imagen del payload */
+.payload-image {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilos para la información del payload */
+.payload-info {
+    text-align: justify; /* Texto justificado */
+    width: 100%;
+}
+
+.payload-info h2 {
+    font-size: 24px;
     margin-bottom: 10px;
     color: #333;
 }
 
-.payload p {
+.payload-info p {
     margin-bottom: 8px;
     font-size: 1.1rem;
     line-height: 1.6;
 }
 
-.payload a {
+.payload-info a {
     color: #007bff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.payload a:hover {
+.payload-info a:hover {
     color: #0056b3;
 }
-
-/* Estilos para la paginación */
 
 /* Estilos mejorados para el módulo de ships */
 
@@ -731,25 +863,25 @@ main {
 
 /* Estilos para cada ship */
 .ship {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: transparent; /* Fondo transparente */
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center; /* Texto centrado */
+    color: #fff; /* Texto blanco */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ship:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(148, 134, 134, 0.2);
 }
 
 .ship h2 {
-    font-size: 1.8rem;
+    font-size: 4rem;
     margin-bottom: 10px;
-    color: #333;
+    color: #ffffff;
 }
 
 .ship p {

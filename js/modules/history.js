@@ -30,13 +30,18 @@ function paginate(items, page) {
 
 function renderHistory(data, container) {
     const historyHtml = data.map(event => `
-        <div class="history-event">
-            <h2>${event.title}</h2>
-            <p>Date: ${new Date(event.event_date_utc).toLocaleDateString()}</p>
-            <p>Details: ${event.details}</p>
-            <p>Flight Number: ${event.flight ? event.flight : 'N/A'}</p>
-            <p>Article: <a href="${event.links.article}" target="_blank">${event.links.article}</a></p>
-            <p>Wikipedia: <a href="${event.links.wikipedia}" target="_blank">${event.links.wikipedia}</a></p>
+        <div class="history">
+            <div class="image-container">
+                <img src="/storage/img/naveop.svg" alt="SpaceX Image">
+            </div>
+            <div class="history-event">
+                <h2>${event.title}</h2>
+                <p>Date: ${new Date(event.event_date_utc).toLocaleDateString()}</p>
+                <p>Details: ${event.details}</p>
+                <p>Flight Number: ${event.flight ? event.flight : 'N/A'}</p>
+                <p>Article: <a href="${event.links.article}" target="_blank">${event.links.article}</a></p>
+                <p>Wikipedia: <a href="${event.links.wikipedia}" target="_blank">${event.links.wikipedia}</a></p>
+            </div>
         </div>
     `).join('');
 

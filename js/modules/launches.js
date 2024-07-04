@@ -31,6 +31,9 @@ function paginate(items, page) {
 function renderLaunches(data, container) {
     const launchesHtml = data.map(launch => `
         <div class="launch">
+        <div class="image-container">
+                <img src="/storage/img/naveop.svg" alt="SpaceX Image">
+            </div>
             <h2>${launch.name}</h2>
             <p>Date UTC: ${launch.date_utc}</p>
             <p>Date Local: ${launch.date_local}</p>
@@ -39,17 +42,17 @@ function renderLaunches(data, container) {
             <p>Details: ${launch.details}</p>
             <p>Links:
                 <ul>
-                    <li>Reddit Campaign: <a href="${launch.links.reddit.campaign}" target="_blank">${launch.links.reddit.campaign}</a></li>
-                    <li>Reddit Launch: <a href="${launch.links.reddit.launch}" target="_blank">${launch.links.reddit.launch}</a></li>
                     <li>Article: <a href="${launch.links.article}" target="_blank">${launch.links.article}</a></li>
                     <li>Wikipedia: <a href="${launch.links.wikipedia}" target="_blank">${launch.links.wikipedia}</a></li>
                 </ul>
             </p>
+            
         </div>
     `).join('');
 
     container.innerHTML = launchesHtml;
 }
+
 
 function setupPagination(totalItems, container) {
     const itemsPerPage = 1; // Mostrar un lanzamiento por página

@@ -42,8 +42,48 @@ export function renderDragons(data, container, page) {
             <p>Pressurized Capsule: ${dragon.pressurized_capsule ? 'Yes' : 'No'}</p>
             <p>Heat Shield Material: ${dragon.heat_shield.material}</p>
             <p>Wikipedia: <a href="${dragon.wikipedia}" target="_blank">${dragon.wikipedia}</a></p>
-            <img src="/storage/img/DRAGON1.jpg" alt="${dragon.name} image" style="display: ${image1Visibility};">
-            <img src="/storage/img/DRAGON2.jpg" alt="${dragon.name} image" style="display: ${image2Visibility};">
+            <div class="dragon-images">
+                <img src="/storage/img/DRAGON1.jpg" alt="${dragon.name} image" style="display: ${image1Visibility};">
+                <img src="/storage/img/DRAGON2.jpg" alt="${dragon.name} image" style="display: ${image2Visibility};">
+            </div>
+            <table class="dragon-table">
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Active</td>
+                    <td>${dragon.active ? 'Yes' : 'No'}</td>
+                </tr>
+                <tr>
+                    <td>Crew Capacity</td>
+                    <td>${dragon.crew_capacity}</td>
+                </tr>
+                <tr>
+                    <td>First Flight</td>
+                    <td>${dragon.first_flight}</td>
+                </tr>
+                <tr>
+                    <td>Diameter</td>
+                    <td>${dragon.diameter.meters} meters</td>
+                </tr>
+                <tr>
+                    <td>Height with Trunk</td>
+                    <td>${dragon.height_w_trunk.meters} meters</td>
+                </tr>
+                <tr>
+                    <td>Pressurized Capsule</td>
+                    <td>${dragon.pressurized_capsule ? 'Yes' : 'No'}</td>
+                </tr>
+                <tr>
+                    <td>Heat Shield Material</td>
+                    <td>${dragon.heat_shield.material}</td>
+                </tr>
+                <tr>
+                    <td>Wikipedia</td>
+                    <td><a href="${dragon.wikipedia}" target="_blank">${dragon.wikipedia}</a></td>
+                </tr>
+            </table>
         </div>
     `;
 
