@@ -43,8 +43,8 @@ export function renderDragons(data, container, page) {
             <p>Heat Shield Material: ${dragon.heat_shield.material}</p>
             <p>Wikipedia: <a href="${dragon.wikipedia}" target="_blank">${dragon.wikipedia}</a></p>
             <div class="dragon-images">
-                <img src="storage/img/DRAGON1.jpg" alt="${dragon.name} image" style="display: ${image1Visibility};">
-                <img src="storage/img/DRAGON2.jpg" alt="${dragon.name} image" style="display: ${image2Visibility};">
+                <img src="/storage/img/DRAGON1.jpg" alt="${dragon.name} image" style="display: ${image1Visibility};">
+                <img src="/storage/img/DRAGON2.jpg" alt="${dragon.name} image" style="display: ${image2Visibility};">
             </div>
             <table class="dragon-table">
                 <tr>
